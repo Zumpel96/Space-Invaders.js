@@ -1,0 +1,320 @@
+body, html { 
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+/*BACKGROUND*/
+#container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+	z-index: 1;
+	background-color: black;
+}
+
+/*GAME*/
+#canvas {
+	display: block;
+    width: 660px;
+    height: 650px;
+    position: absolute;
+    left: calc(50% - 330px);
+    top: calc(75% - 11% - 385px);
+	z-index: 2;
+	background-color: black;
+		
+	border: 3px solid yellow;
+	outline: 2px solid red;	
+}
+
+#line{
+	display: none;
+    width: 660px;
+    height: 1px;
+    position: absolute;
+    left: calc(50% - 327px);
+    top: calc(75% - 11% + 215px);
+	z-index: 3;	
+	border-top: 3px solid white;
+}
+
+#score{
+	display: none;
+    width: 630px;
+    height: 40px;
+    position: absolute;
+    left: calc(50% - 315px);
+    top: calc(75% - 11% + 225px);
+	z-index: 3;	
+	
+	text-align: left;
+	font-family: Arial;
+	font-size: 30px;
+	color: white;
+}
+
+#lives{
+	display: none;
+    width: 630px;
+    height: 40px;
+    position: absolute;
+    left: calc(50% - 315px);
+    top: calc(75% - 11% + 225px);
+	z-index: 3;	
+	
+	text-align: right;
+	font-family: Arial;
+	font-size: 30px;
+	color: white;
+}
+
+
+/*HEAD*/
+#head{
+	width: 100%;
+	height: 25%;
+	top: 1%;
+	position: absolute;
+	z-index: 3;
+}
+
+/*LOGO*/
+#logo{
+	display: block;
+	width: 50vmin;
+	height: auto;
+	margin: auto;
+}
+
+/*FOOT*/
+#foot{
+	width: 100%;
+	height: 2%;
+	position: absolute;
+	bottom: 0%;
+	z-index: 2;
+	background-color: rgba(255, 255, 255, 0.1);
+
+	
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 1.4vh;
+	font-family: Anton;
+	text-align: center;
+}
+
+/*BUTTON*/
+.butt{
+	cursor: pointer;
+	font: 20px Arial;
+	color: white;
+	width: 300px;
+	height: 50px;
+	border: 2px solid white;
+	background-color: rgba(255, 255, 255, 0);
+	z-index: 4;
+	position: absolute;
+}
+
+.butt:hover{
+	background-color: rgba(255, 255, 255, 0.06);
+}
+
+.diff{
+	cursor: pointer;
+	font: 40px Arial;
+	width: 50px;
+	height: 50px;
+	color: rgba(255, 255, 255, 0.2);
+	z-index: 4;
+	background-color: rgba(0, 0, 0, 0);
+	border: 0px;
+	position: absolute;
+}
+
+.diff:hover{
+	color: rgba(255, 255, 255, 1);
+}
+
+.diff:focus{
+	outline: 0;
+}
+
+#harder{
+	left: calc(50% + 60px);
+	top: calc(50% - 121px);	
+}
+
+#easier{
+	left: calc(50% - 110px);
+	top: calc(50% - 121px);	
+}
+
+#replay{
+	left: calc(50% - 150px);
+	top: calc(50% + 227.5px);	
+}
+
+#back{
+	left: calc(50% - 150px);
+	top: calc(50% + 227.5px + 70px);	
+}
+
+#headline{
+	left: calc(50% - 150px);
+	top: calc(50% - 210px);	
+	z-index: 4;
+	position: absolute;
+	
+	text-align: center;
+	color: white;
+	font: 40px Arial;
+	width: 300px;
+	height: 100px;
+}
+
+#difficulty{
+	left: calc(50% - 150px);
+	top: calc(50% - 115px);	
+	z-index: 4;
+	position: absolute;
+	
+	text-align: center;
+	color: white;
+	font: 30px Arial;
+	width: 300px;
+	height: 100px;
+}
+
+#b1player{
+	left: calc(50% - 150px);
+	top: calc(50% - 60px);
+	border: 2px solid blue;
+}
+
+#b2player{
+	left: calc(50% - 150px);
+	top: calc(50% + 10px);
+	border: 2px solid red;
+}
+
+#b3player{
+	left: calc(50% - 150px);
+	top: calc(50% + 80px);
+	border: 2px solid green;
+}
+
+#b4player{
+	left: calc(50% - 150px);
+	top: calc(50% + 150px);
+	border: 2px solid pink;
+}
+
+#credits{
+	left: calc(50% - 150px);
+	top: calc(50% + 220px);
+}
+
+#control{
+	left: calc(50% - 150px);
+	top: calc(50% + 290px);
+}
+
+#back2{
+	top: calc(50% + 220px);
+	left: calc(50% - 150px);
+}
+
+#back3{
+	top: calc(50% + 220px);
+	left: calc(50% - 150px);
+}
+
+#buttonHide{
+	display: none;
+}
+
+.gamepad:not(:-moz-handler-blocked){
+	width: 50px;
+	height: 50px;
+	z-index: 4;
+	background-color: rgba(0, 0, 0, 0);
+	opacity: 0.1;
+	transition: opacity .2s ease-in-out;
+	border: 0px;
+	background-image: url("../img/gamepad.png");
+	position: absolute;
+}
+
+.gamepad:focus{
+	outline: 0;
+	transition: opacity .2s ease-in-out;
+}
+
+.gamepad{
+	width: 50px;
+	height: 50px;
+	z-index: 4;
+	background-color: rgba(0, 0, 0, 0);
+	opacity: 1;
+	border: 0px;
+	background-image: url("../img/sgamepad.png");
+	position: absolute;
+}	
+
+#gp1{
+	left: calc(50% - 225px);
+	top: calc(50% - 60px);
+}
+
+#gp2{
+	left: calc(50% - 225px);
+	top: calc(50% + 10px);
+}
+
+#creditsScreen {
+	display: block;
+    width: 660px;
+    height: 650px;
+    position: absolute;
+    left: calc(50% - 327px);
+    top: calc(75% - 11% - 382px);
+	z-index: 5;
+	background-color: black;
+	display: none;
+	
+	color: white;
+	text-align: center;
+	font: 30px Arial;
+}
+
+#controlScreen {
+	display: block;
+    width: 660px;
+    height: 650px;
+    position: absolute;
+    left: calc(50% - 327px);
+    top: calc(75% - 11% - 382px);
+	z-index: 5;
+	background-color: black;
+	display: none;
+	
+	color: white;
+	text-align: center;
+	font: 30px Arial;
+}
+
+#controlTable{
+	font: 20px Arial;
+	caption-side: top;
+	width: 100%;
+}
+
+thead {
+	font-weight: bold;
+	font: 22px Arial;
+}
