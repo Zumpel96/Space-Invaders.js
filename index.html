@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Space Invaders - Bernhard Ruckenstuhl | Markus Exler</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+		<script src="js/handler.js"></script>
+	</head>
+	<body>	
+		<!--HEADER!-->
+		<div id="head">
+			<img id="logo" src="img/logo.png" alt="logo">
+		</div>
+		
+		
+		<!--BACKGROUND!-->
+		<div id="container"></div>
+		
+		<script src ="js/background.js"></script>
+		<script>
+			var container = document.getElementById('container');
+			var background = new Background();
+			background.initialise(container);
+			background.start();
+		</script>
+	
+		
+		
+		<!--MAINGAME!-->
+		<div id="canvas"></div>
+		<script src="js/buttons.js"></script>
+		<div id="creditsScreen">
+			<h1>Credits</h1>
+			
+			Sounds by freesounds.org.<br/>
+			Background music by Riot Games inc.<br/>
+			All rights for the used sounds and music<br/>
+			belong to their responsive owners<br/>
+			<br/>
+			Space Invaders Logo by Wikimedia Commons.<br/>
+			Gamepad Icon by iconfinder.com<br/>
+			<br/>
+			Code by Markus Exler and Bernhard Ruckenstuhl.  
+			<button type="button" class="butt" id="back2" onClick="creditsHide();">Back</button>
+		</div>
+		<div id="controlScreen">
+			<h1>Controls</h1><br/>
+			Gamepad support only under Firefox.<br/><br/><br/>
+			
+			<table id="controlTable">
+				<thead>
+					<tr>
+						<th>Player</th>
+						<th>Move Left</th>
+						<th>Move Right</th>
+						<th>Shoot</th>
+						<th>Pause</th>
+					</tr>
+				</thead>
+				<tr>
+					<td><img src="img/p1.gif" alt="p1"></td>
+					<td>Arrow Left</td>
+					<td>Arrow Right</td>
+					<td>Arrow Up</td>
+					<td>Spacebar</td>
+				</tr>
+				<tr>
+					<td><img src="img/p2.png" alt="p2"></td>
+					<td>A</td>
+					<td>D</td>
+					<td>W</td>
+					<td>Spacebar</td>
+				</tr>
+				<tr>
+					<td><img src="img/p3.png" alt="p3"></td>
+					<td>Num 4</td>
+					<td>Num 6</td>
+					<td>Num 8</td>
+					<td>Spacebar</td>
+				</tr>
+				<tr>
+					<td><img src="img/p4.png" alt="p4"></td>
+					<td>J</td>
+					<td>L</td>
+					<td>I</td>
+					<td>Spacebar</td>
+				</tr>
+			</table> 
+
+			<button type="button" class="butt" id="back3" onClick="controlHide();">Back</button>
+		</div>
+		
+		<script src="js/game.js"></script>
+		<div id="menuHide">
+			<div id="headline">Startmenu</div>
+			<div id="difficulty">Medium</div>
+			<button type="button" class="diff" id="harder" onClick="harder();">></button>
+			<button type="button" class="diff" id="easier" onClick="easier();">&lt;</button>
+			
+			<button type="button" class="butt" id="b1player" onClick="game1player();">1 Player</button>
+			<div class="gamepad" id="gp1"></div>
+			<button type="button" class="butt" id="b2player" onClick="game2player();">2 Player</button>
+			<div class="gamepad" id="gp2"></div>
+			<button type="button" class="butt" id="b3player" onClick="game3player();">3 Player</button>
+			<button type="button" class="butt" id="b4player" onClick="game4player();">4 Player</button>
+			
+			<button type="button" class="butt" id="credits" onClick="credits();">Credits</button>
+			<button type="button" class="butt" id="control" onClick="control();">Controls</button>
+		</div>
+		
+		<div id="buttonHide">
+			<button type="button" class="butt" id="replay" onClick="replay();">Play Again!</button>
+			<button type="button" class="butt" id="back" onClick="document.getElementById('buttonHide').style.display = 'none'; goToMain();">Back to Menu</button>
+		</div>
+		
+		<div id="line"></div>
+		<div id="score">Score: 0</div>
+		<div id="lives">Lives: 3</div>
+	
+	
+		<!--FOOTER!-->
+		<div id="foot">
+			&copy; 2016 | Bernhard Ruckenstuhl - Markus Exler
+		</div>
+	</body>
+</html>
